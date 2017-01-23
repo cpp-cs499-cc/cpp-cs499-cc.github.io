@@ -1,0 +1,12 @@
+<md-fab-speed-dial class="md-fab md-scale md-fab-bottom-right ng-isolate-scope md-hover-full fab-container fab-position-fix" ng-mouseenter="vm.isOpen = true" ng-mouseleave="vm.isOpen = false" md-open="vm.isOpen" md-direction="up">
+    <md-fab-trigger ng-show="!vm.filesSelected">
+        <md-button aria-label="menu" ng-click="vm.uploadGeneric()" class="md-fab md-warn md-button md-ink-ripple">
+            <md-icon  class="material-icons">file_upload</md-icon>
+        </md-button>
+    </md-fab-trigger>
+    <md-fab-trigger ng-show="vm.filesSelected">
+        <md-button aria-label="menu"  ng-click="vm.delete()" class="md-fab fab-background-color-trash md-button md-ink-ripple">
+            <md-icon class="material-icons">delete</md-icon>
+        </md-button>
+    </md-fab-trigger>
+</md-fab-speed-dial>

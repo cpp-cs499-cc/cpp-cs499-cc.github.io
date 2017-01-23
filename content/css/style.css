@@ -1,0 +1,12 @@
+.fab-position-fix {
+    position: fixed !important;
+}
+.fab-background-color-trash {
+    background-color: #9c0001 !important;
+}
+.fab-background-transition {
+    -webkit-transition: background-color .25s ease-in;
+    -moz-transition: background-color .25s ease-in;
+    -o-transition: background-color .25s ease-in;
+    transition: background-color .25s ease-in;
+}

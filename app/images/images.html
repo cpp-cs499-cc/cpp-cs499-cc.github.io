@@ -1,0 +1,9 @@
+<div layout layout-wrap layout-align="center">
+
+    <md-card ng-repeat="image in vm.images"class="md-card md-ink-ripple" flex="30">
+        <img src="{{image.thumbnail}}" class="md-card-image" alt="image caption">
+        <md-card-content>
+            <p>{{image.id}}</p>
+        </md-card-content>
+    </md-card>
+</div>

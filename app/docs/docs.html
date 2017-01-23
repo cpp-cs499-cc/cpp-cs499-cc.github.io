@@ -1,0 +1,32 @@
+<md-card>
+    <md-toolbar class="md-table-toolbar md-default">
+        <div class="md-toolbar-tools">
+            <h2 class="md-title">Documents</h2>
+            <span flex></span>
+            <md-button aria-label="refresh"  ng-click="vm.refresh()" class="md-ink-ripple">
+                <md-icon class="material-icons">refresh</md-icon>
+            </md-button>
+        </div>
+
+    </md-toolbar>
+    <md-table-container>
+        <table md-table md-row-select multiple ng-model="vm.selected" md-progress="vm.promise" class="ng-pristine ng-untouched ng-valid md-table md-row-select">
+            <thead md-head class="md-head">
+            <tr md-row class="md-row">
+                <th md-column md-active md-sort class="md-column"><span>File Name</span></th>
+                <th md-column md-numeric class="md-column"><span>Last Modified</span></th>
+                <th md-column md-numeric class="md-column md-numeric">File Size</th>
+                <th md-column class="md-column">Owner</th>
+            </tr>
+            </thead>
+            <tbody md-body class="md-body">
+            <tr md-row md-select="file" md-on-deselect="vm.update" md-on-select="vm.update" md-select-id="file.id" md-auto-select ng-repeat="file in vm.files" class="md-row">
+                <td md-cell class="md-cell"><span><a href="{{file.url}}">{{file.name}}</a></span></td>
+                <td md-cell class="md-cell"><span>{{file.modified}}</span></td>
+                <td md-cell class="md-cell"><span>{{file.size|bytes}}</span></td>
+                <td md-cell class="md-cell"><span>{{file.owner}}</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+</md-card>
